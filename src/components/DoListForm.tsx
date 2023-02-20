@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import { FormEvent, useState } from "react";
 import { Button, TextField, Grid } from "@mui/material";
 
-function DoListForm({ addTodo }) {
+function DoListForm({ addTodo } : {addTodo:( text: string ) => void}) {
 	const [value, setValue] = useState( "" );
 
-	const handleSubmit = ( e ) => {
+	const handleSubmit = ( e : FormEvent<HTMLFormElement> ) => {
 		e.preventDefault();
 		if( !value ) return;
 		addTodo( value );
