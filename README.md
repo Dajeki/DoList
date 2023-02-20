@@ -1,2 +1,2 @@
 # DoList
-ToDo List made with React, Redux, and LocalStorage
+ToDo List made with React, and LocalStorage
