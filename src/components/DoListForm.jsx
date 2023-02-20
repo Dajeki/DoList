@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, TextField, Grid } from "@mui/material";
 
-function TodoForm({ addTodo }) {
+function DoListForm({ addTodo }) {
 	const [value, setValue] = useState( "" );
 
 	const handleSubmit = ( e ) => {
@@ -33,4 +33,4 @@ function TodoForm({ addTodo }) {
 	);
 }
 
-export default TodoForm;
+export default DoListForm;
