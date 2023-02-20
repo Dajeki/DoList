@@ -1,6 +1,6 @@
 const TODO_STORAGE_KEY = "dajeki.dolist.ZKi61uA6";
 
-export function saveTodos( todos ) {
+export function saveTodos( todos : string[] ) {
 	localStorage.setItem( TODO_STORAGE_KEY, JSON.stringify( todos ));
 }
 
