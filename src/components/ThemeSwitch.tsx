@@ -1,4 +1,3 @@
-import React from "react";
 import { useTheme } from "@mui/material/styles";
 import { Box, IconButton } from "@mui/material";
 import { Brightness4, Brightness7 } from "@mui/icons-material";
