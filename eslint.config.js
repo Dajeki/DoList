@@ -5,7 +5,6 @@ import globals from "globals";
 import reactRecommended from "eslint-plugin-react/configs/recommended.js";
 
 export default [
-	reactRecommended,
 	{
 		files          : [ "**/*.{js,jsx,mjs,cjs,ts,tsx}" ],
 		languageOptions: {
@@ -22,12 +21,8 @@ export default [
 			},
 		},
 		plugins: {
+			react,
 			"@typescript-eslint": typescriptEslint,
-		},
-		settings: {
-			react: {
-				version: "detect",
-			},
 		},
 		rules: {
 			"@typescript-eslint/no-explicit-any": 2,
@@ -172,6 +167,55 @@ export default [
 				"error",
 				"always",
 			],
+			"react/destructuring-assignment": "error",
+			"react/jsx-first-prop-new-line" : [
+				"error",
+				"multiline",
+			],
+			"react/jsx-boolean-value"           : "error",
+			"react/jsx-closing-bracket-location": [ 1, "tag-aligned" ],
+			"react/jsx-closing-tag-location"    : "error",
+			"react/jsx-curly-brace-presence"    : [
+				"error",
+				"never",
+			],
+			"react/jsx-curly-newline": [
+				"error",
+				{
+					multiline : "consistent",
+					singleline: "consistent",
+				},
+			],
+			"react/jsx-curly-spacing": [
+				"error",
+				{
+					"when"    : "always",
+					"children": true,
+					"spacing" : {
+						"objectLiterals": "never",
+					},
+				},
+			],
+			"react/jsx-equals-spacing"         : [ "error", "never" ],
+			"react/jsx-fragments"              : "error",
+			"react/jsx-indent-props"           : [ "error", "tab" ],
+			"react/jsx-indent"                 : [ "error", "tab" ],
+			"react/jsx-newline"                : [ "error", { "prevent": true } ],
+			"react/jsx-max-props-per-line"     : [ "error", { "when": "multiline" } ],
+			"react/jsx-one-expression-per-line": [ "error", { "allow": "literal" }],
+			"react/jsx-props-no-multi-spaces"  : "error",
+			"react/jsx-sort-props"             : "error",
+			"react/jsx-space-before-closing"   : [ "error", "always" ],
+			"react/jsx-tag-spacing"            : [ "error", { "beforeClosing": "never" } ],
+			"react/jsx-wrap-multilines"        : [ "error", {
+				"declaration": "parens-new-line",
+				"assignment" : "parens-new-line",
+				"return"     : "parens-new-line",
+				"arrow"      : "parens-new-line",
+				"condition"  : "parens-new-line",
+				"logical"    : "parens-new-line",
+				"prop"       : "parens-new-line",
+			  }],
 		},
 	},
 ];

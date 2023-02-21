@@ -18,9 +18,10 @@ export default function ThemeSwitch({ changeTheme }: ThemeSwitchProps ) {
 				ml            : "auto",
 			}}
 		>
-			{theme.palette.mode} mode
-			<IconButton sx={{ ml: 1 }} onClick={changeTheme} color="inherit">
-				{theme.palette.mode === "dark" ? <Brightness7/> : <Brightness4/>}
+			{ theme.palette.mode }
+			{ " mode" }
+			<IconButton color="inherit" onClick={ changeTheme } sx={{ ml: 1 }}>
+				{ theme.palette.mode === "dark" ? <Brightness7 /> : <Brightness4 /> }
 			</IconButton>
 		</Box>
 	);

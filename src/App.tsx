@@ -56,37 +56,36 @@ function App() {
 	}, [todos] );
 
 	return (
-
 		<Container className="App">
-			<ThemeProvider theme={purpleTheme}>
+			<ThemeProvider theme={ purpleTheme }>
 				<CssBaseline />
 				<Container
+					disableGutters
 					sx={{
 						display   : "flex",
 						alignItems: "center",
 						m         : 0,
 						mb        : "2rem",
 					}}
-					disableGutters={true}
 				>
 					<Box
+						alt="DoList Icon"
 						component="img"
+						mr="1rem"
+						src={ logo512 }
 						sx={{
 							height: 64,
 							width : 64,
 						}}
-						alt="DoList Icon"
-						src={logo512}
-						mr="1rem"
 					/>
-					<Typography variant="h4" align="center" sx={{ display: "inline-block" }}>
+					<Typography align="center" sx={{ display: "inline-block" }} variant="h4">
 						DoList
 					</Typography>
-					<ThemeSwitch changeTheme={changeTheme} />
+					<ThemeSwitch changeTheme={ changeTheme } />
 				</Container>
 				<Container maxWidth="sm">
 					<DoListForm addTodo={ addTodo } />
-					<DoList todos={todos} deleteTodo={deleteTodo} />
+					<DoList deleteTodo={ deleteTodo } todos={ todos } />
 				</Container>
 			</ThemeProvider>
 		</Container>

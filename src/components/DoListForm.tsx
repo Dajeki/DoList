@@ -14,18 +14,18 @@ function DoListForm({ addTodo } : { addTodo: ( text: string ) => void }) {
 	return (
 		<form onSubmit={ handleSubmit }>
 			<Grid container spacing={ 2 }>
-				<Grid item xs={ 12 } sm={ 9 }>
+				<Grid item sm={ 9 } xs={ 12 }>
 					<TextField
-						variant="outlined"
+						autoComplete="off"
 						fullWidth
+						onChange={ ( e ) => setValue( e.target.value ) }
 						placeholder="Add todo..."
 						value={ value }
-						onChange={( e ) => setValue( e.target.value )}
-						autoComplete="off"
+						variant="outlined"
 					/>
 				</Grid>
-				<Grid item xs={ 12 } sm={ 3 }>
-					<Button variant="contained" color="secondary" fullWidth type="submit">
+				<Grid item sm={ 3 } xs={ 12 }>
+					<Button color="secondary" fullWidth type="submit" variant="contained">
 						Add
 					</Button>
 				</Grid>
