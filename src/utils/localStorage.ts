@@ -4,7 +4,7 @@ export function saveTodos( todos : string[] ) {
 	localStorage.setItem( TODO_STORAGE_KEY, JSON.stringify( todos ));
 }
 
-export function getTodos() {
+export function getTodos() : string[] {
 	const todos = localStorage.getItem( TODO_STORAGE_KEY );
 	return todos ? JSON.parse( todos ) : [];
 }

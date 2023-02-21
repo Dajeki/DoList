@@ -5,8 +5,8 @@ function DoList({ todos, deleteTodo } : { todos: string[], deleteTodo: ( index: 
 	return (
 		<List>
 			{todos.map(( todo, index ) => (
-				<ListItem key={index} divider>
-					<ListItemText primary={todo} />
+				<ListItem key={ index } divider>
+					<ListItemText color="secondary" primary={ todo } />
 					<IconButton onClick={() => deleteTodo( index )}>
 						<DeleteIcon color="secondary" />
 					</IconButton>
